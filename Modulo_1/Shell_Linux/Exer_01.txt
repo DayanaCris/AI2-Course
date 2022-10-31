@@ -1,0 +1,56 @@
+### Trabalhando com arquivos de texto
+
+1. Anote em formato de comentário, os comandos utilizados para a realização de cada tarefa apresentada abaixo:
+
+a. Exibir o conteúdo de echo.txt sem a linha de cabeçalho (primeira);
+#     tail -n 7 echo.txt
+# ou
+#     tail -n +3 echo.txt
+b. Exibir o conteúdo de echo.txt classificado pelo nome (não exibir a primeira linha);
+#    sort -n -t, -k2 echo.txt
+# ou
+#    sort -n -t, -k2 echo.txt | column -t
+c. Exibir apenas linhas que contenham *John*;
+#    cat echo.txt | grep -i "John"
+# ou
+#    grep John echo.txt
+d. Exibir apenas linhas que não contenham *John*;
+#   grep -v John echo.txt
+# ou
+#   cat echo.txt | grep -v -i "John"
+e. Exibir apenas linhas que contenham palavras de 4 letras começando com *J*
+#   grep j..., echo.txt
+# ou
+#   cat echo.txt | grep -i "j...,"
+f. Ordenar as linhas pela idade;
+#   sort -n -t, -k4 echo.txt
+# ou
+#   sort -n -t, -k4 echo.txt | Column -t
+g. Descobrir a pessoa mais velha e mais jovem no dataset;
+#   sort -n -t, -k4 echo.txt | head -n +4 (pesoa mais jovem)
+#   sort -n -t, -k4 echo.txt | tail -n +9 (pessoa mais velha)
+h. Listar as cidades presentes no dataset;
+#   cut -d, -f6 echo.txt
+i. Encontrar a pessoa mais velha que mora em Nova Iorque.
+#   awk '{if ($6 ~/Nova/ ) {print $4,$6,$7} }' echo.txt | sort -nrk1,1 | head -1
+2. Apresente as informações para:
+
+a. Quantidade de linhas do arquivo echo.txt;
+#   wc -l echo.txt
+# ou
+#   wc --line echo.txt 
+b. Quantidade de palavras;
+#   wc -w echo.txt
+# ou
+#   wc --word echo.txt 
+c. Quantidade de bytes.
+#   du -hsb echo.txt
+
+3. Crie um script de log que apresente:
+# Está no read.sh 
+
+a. O diretório corrente;
+b. Seu nome completo e sua idade;
+c. Momento de execução do arquivo
+d. Grave uma frase que você acredita ser importante (rs)
+
