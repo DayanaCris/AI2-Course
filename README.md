@@ -1,3 +1,3 @@
-## AI2-Course
+## Estudos
 
-Repositório refente as atividades da residência no HUB Inteligencia Artificial
+Repositório refente aos meus estudos atuais.
