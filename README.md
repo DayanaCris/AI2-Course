@@ -2,4 +2,3 @@
 
 Repositório refente aos meus estudos atuais.
 
-teste
