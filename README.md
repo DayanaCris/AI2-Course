@@ -1,4 +1,3 @@
 ## Estudos
 
-Repositório refente aos meus estudos atuais.
-
+Em construção
